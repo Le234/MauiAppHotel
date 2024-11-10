@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Sobre.Desenvolvedor"
+             Title="Desenvolvedor"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+
+
+
+    <VerticalStackLayout
+                         Padding="10">
+
+
+
+
+        <Label
+            Text="Sobre"
+            TextColor="OrangeRed"
+            FontFamily="Pacifico"
+            FontSize="50"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level3"
+            Margin="20"/>
+     
+        <Label
+            Text="Hospedar-se em um hotel é uma experiência que combina conforto e praticidade, sendo uma escolha popular para viajantes a lazer ou negócios. Os hotéis oferecem uma variedade de acomodações, desde quartos básicos até suítes luxuosas, com serviços que incluem limpeza diária, café da manhã e recepção 24 horas. Muitos hotéis também dispõem de comodidades como piscina, academia, restaurante e serviço de quarto, proporcionando uma estadia conveniente e agradável. Além disso, a localização estratégica de muitos hotéis permite fácil acesso a pontos turísticos, centros comerciais e áreas empresariais, facilitando a mobilidade e otimizando o tempo dos hóspedes durante a viagem."
+            VerticalOptions="Center"
+           FontFamily="Pacifico"
+            HorizontalOptions="Center" 
+            Margin="10"/>
+
+
+
+        <Label 
+            
+            Text="Desenvolvedor: Leandro Melo Oliveira" 
+            TextColor="OrangeRed"
+            FontFamily="Pacifico"
+            FontSize="20"
+            Style="{StaticResource Headline}"
+            Margin="0,50,0,0"/>
+
+        <Label
+             Text="Ano: 2024" 
+            TextColor="OrangeRed"
+             FontFamily="Pacifico"
+             FontSize="20"
+             Style="{StaticResource Headline}"
+             Margin="10"/>
+        <Button Text="Voltar" Background="OrangeRed" HorizontalOptions="Center" Clicked="Button_Clicked" />
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
