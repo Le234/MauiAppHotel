@@ -74,6 +74,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Chonburi-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Pacifico-Regular.ttf" />
+	  <None Remove="Resources\Images\coqueiro.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>

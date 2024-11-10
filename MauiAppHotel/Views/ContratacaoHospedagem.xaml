@@ -4,96 +4,119 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="ForestGreen" >
-    
-    
-    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+             BackgroundColor="DarkSeaGreen" >
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="10"
-                         BackgroundColor="ForestGreen" >
-                         
-        <Label Text="Cálculo da Diária"
-               FontFamily="Pacifico"
-               FontSize="50"
+                         BackgroundColor="DarkSeaGreen" >
+
+            <Frame HeightRequest="150">
+                <VerticalStackLayout>
+
+                    <Image
+                    Source="coqueiro.jpg"
+                    WidthRequest="130"
+                    HeightRequest="90"
+                    Aspect="AspectFit" />
+
+                    <Label Text="HOTEL PRAIA"
+                       HorizontalOptions="Center"
+                       FontFamily="Chonburi"
+                       FontSize="20"
+                       TextColor="LightSteelBlue" />
+
+                </VerticalStackLayout>
+
+
+            </Frame>
+
+            <Label Text="Cálculo da Diária"
+               Margin="10"
+               HorizontalOptions="Center"
+               FontFamily="OpenSans"
+               FontSize="30"
                SemanticProperties.HeadingLevel="Level1"
                TextColor="OrangeRed"/>
 
-        <Frame Padding="10">
-            <VerticalStackLayout>
-                <Grid RowDefinitions="Auto, Auto"
+            <Frame Padding="10">
+                <VerticalStackLayout>
+                    <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
-                    
-                    <Label Grid.Row="0" Grid.Column="0"
+
+                        <Label Grid.Row="0" Grid.Column="0"
                              Text="Adultos:"/>
 
-                    <Label Grid.Row="0" Grid.Column="1" 
+                        <Label Grid.Row="0" Grid.Column="1" 
                            TextColor="{StaticResource Black}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
-                    
-                    <Stepper Grid.Row="0" Grid.Column="2"
+
+                        <Stepper Grid.Row="0" Grid.Column="2"
                                    x:Name="stp_adultos"
                                    Minimum="0"
                                    Maximum="10"
                                    Increment="1" />
 
-                    <Label Grid.Row="1" Grid.Column="0"
+                        <Label Grid.Row="1" Grid.Column="0"
                              Text="Crianças:" />
 
-                    <Label Grid.Row="1" Grid.Column="1"
+                        <Label Grid.Row="1" Grid.Column="1"
                            TextColor="{StaticResource Black}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}"/>
 
-                    <Stepper Grid.Row="1" Grid.Column="2"
+                        <Stepper Grid.Row="1" Grid.Column="2"
                              x:Name="stp_criancas"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1"/> 
-               </Grid>
-                <Frame Padding="10" Margin="10">
-                    <VerticalStackLayout>
-                        <Label Text="Escolha sua Suíte" 
+                             Increment="1"/>
+                    </Grid>
+                    <Frame Padding="10" Margin="10">
+                        <VerticalStackLayout>
+                            <Label Text="Escolha sua Suíte" 
                                TextTransform="Uppercase"
                                FontSize="Subtitle"
                                TextColor="OrangeRed"/>
 
 
-                        <Picker 
+                            <Picker 
                             x:Name="pck_quarto"
                             Title="Selecione sua Acomodação"
                             ItemDisplayBinding="{Binding Descricao}"/>
-                    </VerticalStackLayout>
-                </Frame>
+                        </VerticalStackLayout>
+                    </Frame>
 
 
-                <Frame Padding="10" Margin="10">
-                    <VerticalStackLayout  Spacing="10">
-                        
-                        <Label Text="Período da Estadia" 
+                    <Frame Padding="10" Margin="10">
+                        <VerticalStackLayout  Spacing="10">
+
+                            <Label Text="Período da Estadia" 
                                TextTransform="Uppercase"
                                FontSize="Subtitle"
                                TextColor="OrangeRed"/>
 
-                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label  Text="Check-in:"/>
-                            <DatePicker x:Name="dtpck_checkin"
+                            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                                <Label  Text="Check-in:"/>
+                                <DatePicker x:Name="dtpck_checkin"
                                         DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
-                        </HorizontalStackLayout>
+                            </HorizontalStackLayout>
 
-                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="Check-out:"/>
-                            <DatePicker x:Name="dtpck_checkout"
+                            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="Check-out:"/>
+                                <DatePicker x:Name="dtpck_checkout"
                                         Format="dd/MM/yyyy"/>
-                        </HorizontalStackLayout>
-                    </VerticalStackLayout>
-                </Frame>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
 
-              
+
                     <Button Text="Avançar" BackgroundColor="OrangeRed" Clicked="Button_Clicked"/>
-                <Button Text="Sobre" BackgroundColor="OrangeRed" Clicked="Button_Clicked_1"/>
-                
-            </VerticalStackLayout>
-        </Frame>
-    </VerticalStackLayout>
+                    <Button Text="Sobre" BackgroundColor="OrangeRed" Clicked="Button_Clicked_1"/>
+
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

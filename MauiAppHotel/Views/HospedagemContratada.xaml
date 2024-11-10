@@ -4,8 +4,9 @@
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="LightBlue">
-             
+    
    <ScrollView>
+       
       <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
 
             <Frame HeightRequest="150">
@@ -32,46 +33,49 @@
             <Label 
                    Text="Suíte Super Luxo"
                    Margin="10"
-               TextColor="OrangeRed"
-               FontFamily="Pacifico"
-               FontSize="50"
-               HorizontalTextAlignment="Center"/>
-        <Frame Margin="10">
-            <HorizontalStackLayout>
+                   TextColor="OrangeRed"
+                   FontFamily="OpenSans"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Frame Margin="10">
                 <HorizontalStackLayout>
-                    <Label Text=" Adultos: "/>
-                    <Label Text=" 2 " TextColor="OrangeRed"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout> 
-                    <Label Text=" Criaças: " />
-                    <Label Text=" 1 " TextColor="OrangeRed"/>
+                    <HorizontalStackLayout>
+                        <Label Text=" Adultos: "/>
+                        <Label Text=" 2 " TextColor="OrangeRed"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text=" Criaças: " />
+                        <Label Text=" 1 " TextColor="OrangeRed"/>
 
+                    </HorizontalStackLayout>
                 </HorizontalStackLayout>
-            </HorizontalStackLayout>
-        </Frame>
-        <Frame Margin="10">
-            <Grid  ColumnDefinitions="*, *, *"
+            </Frame>
+            <Frame Margin="10">
+                <Grid  ColumnDefinitions="*, *, *"
                    RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text=" Check-in: "/>
-                <Label Grid.Row="0" Grid.Column="1" Text=" Check-out: "/>
-                <Label Grid.Row="0" Grid.Column="2" Text=" Estadia: "/>
+                    <Label Grid.Row="0" Grid.Column="0" Text=" Check-in: "/>
+                    <Label Grid.Row="0" Grid.Column="1" Text=" Check-out: "/>
+                    <Label Grid.Row="0" Grid.Column="2" Text=" Estadia: "/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text=" 09/11/2024 "/>
-                <Label Grid.Row="1" Grid.Column="1" Text=" 11/11/2024 "/>
-                <Label Grid.Row="1" Grid.Column="2" Text=" 8 "/>
-            </Grid>
-        </Frame>
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <Label Text=" Valor Total " />
-                <Label Text=" R$ 888,00 " />
-            </HorizontalStackLayout>
-        </Frame>
-        <Button Text=" Voltar " 
+                    <Label Grid.Row="1" Grid.Column="0" Text=" 09/11/2024 "/>
+                    <Label Grid.Row="1" Grid.Column="1" Text=" 11/11/2024 "/>
+                    <Label Grid.Row="1" Grid.Column="2" Text=" 8 "/>
+                </Grid>
+            </Frame>
+            <Frame Margin="10">
+                <HorizontalStackLayout>
+                    <Label Text=" Valor Total " />
+                    <Label Text=" R$ 888,00 " />
+                </HorizontalStackLayout>
+            </Frame>
+            <Button Text=" Voltar " 
                 Background="OrangeRed"
                 HorizontalOptions="Center"
                 Clicked="Button_Clicked" />
-
-    </VerticalStackLayout>
+          
+      </VerticalStackLayout>
+       
    </ScrollView>
+    
 </ContentPage> 
