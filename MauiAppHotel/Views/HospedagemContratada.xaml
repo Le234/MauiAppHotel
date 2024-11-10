@@ -5,8 +5,33 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="LightBlue">
              
-    <VerticalStackLayout VerticalOptions="CenterAndExpand">
-        <Label Text="Suíte Super Luxo"
+   <ScrollView>
+      <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+
+            <Frame HeightRequest="150">
+                <VerticalStackLayout>
+
+                    <Image
+                            Source="coqueiro.jpg"
+                            WidthRequest="130"
+                            HeightRequest="90"
+                            Aspect="AspectFit" />
+
+                    <Label 
+                           Text="HOTEL PRAIA"
+                           HorizontalOptions="Center"
+                           FontFamily="Chonburi"
+                           FontSize="20"
+                           TextColor="LightSteelBlue" />
+
+                </VerticalStackLayout>
+
+
+            </Frame>
+
+            <Label 
+                   Text="Suíte Super Luxo"
+                   Margin="10"
                TextColor="OrangeRed"
                FontFamily="Pacifico"
                FontSize="50"
@@ -48,5 +73,5 @@
                 Clicked="Button_Clicked" />
 
     </VerticalStackLayout>
-    
+   </ScrollView>
 </ContentPage> 
