@@ -31,7 +31,7 @@
             </Frame>
 
             <Label 
-                   Text="Suíte Super Luxo"
+                   Text="{Binding QuartoSelecionado.Descricao}"
                    Margin="10"
                    TextColor="OrangeRed"
                    FontFamily="OpenSans"
@@ -39,17 +39,17 @@
                    HorizontalTextAlignment="Center"/>
             
             <Frame Margin="10">
-                <HorizontalStackLayout>
-                    <HorizontalStackLayout>
+                <StackLayout  Orientation="Horizontal">
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                         <Label Text=" Adultos: "/>
                         <Label Text=" 2 " TextColor="OrangeRed"/>
                     </HorizontalStackLayout>
-                    <HorizontalStackLayout>
+                    <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                         <Label Text=" Criaças: " />
                         <Label Text=" 1 " TextColor="OrangeRed"/>
 
                     </HorizontalStackLayout>
-                </HorizontalStackLayout>
+                </StackLayout>
             </Frame>
             <Frame Margin="10">
                 <Grid  ColumnDefinitions="*, *, *"
@@ -58,21 +58,18 @@
                     <Label Grid.Row="0" Grid.Column="1" Text=" Check-out: "/>
                     <Label Grid.Row="0" Grid.Column="2" Text=" Estadia: "/>
 
-                    <Label Grid.Row="1" Grid.Column="0" Text=" 09/11/2024 "/>
-                    <Label Grid.Row="1" Grid.Column="1" Text=" 11/11/2024 "/>
-                    <Label Grid.Row="1" Grid.Column="2" Text=" 8 "/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataCheckIn,StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataCheckOut,StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Estadia}"/>
                 </Grid>
             </Frame>
             <Frame Margin="10">
-                <HorizontalStackLayout>
-                    <Label Text=" Valor Total " />
-                    <Label Text=" R$ 888,00 " />
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text=" Valor Total: " />
+                    <Label Text="{Binding ValorTotal,StringFormat='{}{0:c}'}"/>
                 </HorizontalStackLayout>
             </Frame>
-            <Button Text=" Voltar " 
-                Background="OrangeRed"
-                HorizontalOptions="Center"
-                Clicked="Button_Clicked" />
+            <Button Text=" Voltar " Clicked="Button_Clicked" />
           
       </VerticalStackLayout>
        

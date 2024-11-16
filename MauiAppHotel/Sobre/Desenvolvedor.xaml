@@ -10,10 +10,10 @@
 
         <VerticalStackLayout Padding="10">
             
-
-
-
-
+            
+            
+            
+            
             
             <Label
                     Text="Sobre"
@@ -50,7 +50,7 @@
                      Style="{StaticResource Headline}"
                      Margin="10"/>
             
-            <Button Text="Voltar" Background="OrangeRed" HorizontalOptions="Center" Clicked="Button_Clicked" />
+            <Button Text="Voltar" Clicked="Button_Clicked" />
 
 
 
